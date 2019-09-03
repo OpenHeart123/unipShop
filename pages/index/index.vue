@@ -1,5 +1,6 @@
 <template>
 	<view>
+		<!--tabBar组件-->
 		<swiper-tab-bar :tabBars="tabBars" :tabIndex="tabIndex" @tabTap="tabTap"></swiper-tab-bar>
 		<!--滑动组件-->
 		<view class="uni-tab-bar">
@@ -14,11 +15,9 @@
 							<!-- 上拉加载-->
 							<load-more :loadText="items.loadText"></load-more>
 						</template>
-							<!-- 默认无数据显示-->
 						<template v-else>
-							<view class="nothing">
-								<image src="../../static/common/nothing.png" mode="widthFix"></image>
-							</view>
+							<!--默认数据 -->
+							<no-thing></no-thing>
 						</template>
 					</scroll-view>
 				</swiper-item>
@@ -33,11 +32,13 @@
 	import indexList from '@/components/index/index-list.vue';
 	import swiperTabBar from '@/components/index/swiper-tab-bar.vue';
 	import loadMore from '@/components/common/load-more.vue';
+	import noThing from '../../components/common/no-thing.vue'
 	export default {
 		components: {
 			indexList,
 			swiperTabBar,
-			loadMore
+			loadMore,
+			noThing
 		},
 		data() {
 			return {
@@ -185,12 +186,17 @@
 							},
 						]
 					},
+					{
+						loadText: '上拉加载更多',
+						list: []
+					},
 
 
 
 				],
 				tabIndex: 0,
 				screenHeight: 500,
+
 				tabBars: [{
 						name: '关注',
 						id: 'guanzhu'
@@ -267,23 +273,28 @@
 
 				}
 			});
-		}
+		},
+		//监听搜索栏点击事件
+		onNavigationBarSearchInputClicked() {
+			uni.navigateTo({
+				url: '../search/search'
+			})
+		},
+		//监听原生标题栏按钮点击事件
+		onNavigationBarButtonTap(e){
+			// console.log(JSON.stringify(e))
+			if(e.index==1){
+				uni.navigateTo({
+					url: '../add-input/add-input',
+				});
+			}
+		},
+
 
 
 	}
 </script>
 
 <style>
-	.nothing {
-		background: #ffffff;
-		position: absolute;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		top: 0;
-	}
-
-	.nothing image {
-		width: 50%;
-	}
+	
 </style>

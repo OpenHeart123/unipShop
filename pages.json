@@ -53,6 +53,48 @@
 			"style": {}
 		}
 	   
+        ,{
+            "path" : "pages/search/search",
+            "style" : {
+				"app-plus": {
+					"scrollIndicator":"none",
+					"bounce":"none",
+					"titleNView": {
+						"autoBackButton":false,
+						"searchInput": {
+							"align":"left",
+							"backgroundColor":"#F7F7F7",
+							"borderRadius":"4px",
+							"placeholder":"请输入糗事",
+							"placeholderColor":"#CACACA",
+							"disabled":"false"
+						},
+						"buttons": [
+							//右边
+							{
+								"color": "#000000",
+								"colorPressed": "#BBBBBB",
+								"float": "right",
+								"fontSize": "12px",							
+								"text": "取消"
+							}
+				
+						]
+					}
+				}
+				
+			}
+        }
+        ,{
+            "path" : "pages/add-input/add-input",
+            "style" : {
+				"app-plus":{
+					"scrollIndicator":"none",
+					"bounce":"none",
+					"titleNView":false
+				}
+			}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

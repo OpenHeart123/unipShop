@@ -1,0 +1,2 @@
+setCssToHead([".",[1],"uni-textarea{ border: ",[0,1]," solid #eeeeee; }\n",],undefined,{path:"./pages/add-input/add-input.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/add-input/add-input.wxml') } }));
