@@ -1,6 +1,6 @@
 <template>
 	<view class="home">
-		我是home组件
+		{{msg}}
 	</view>
 </template>
 
@@ -8,10 +8,13 @@
 	export default {
 		data() {
 			return {
-				
+				msg:'我是home组件'
 			}
 		},
 		methods: {
+			 
+		},
+		onLoad(){
 			
 		}
 	}
