@@ -1,1 +1,1 @@
-<view>home</view>
+<view class="home">我是home组件</view>

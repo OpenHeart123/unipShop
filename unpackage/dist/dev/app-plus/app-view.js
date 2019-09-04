@@ -1314,6 +1314,7 @@ if( __WXML_GLOBAL__.ops_cached.$gwx_11)return __WXML_GLOBAL__.ops_cached.$gwx_11
 __WXML_GLOBAL__.ops_cached.$gwx_11=[];
 (function(z){var a=11;function Z(ops){z.push(ops)}
 Z([3,'home'])
+Z([3,'我是home组件'])
 })(__WXML_GLOBAL__.ops_cached.$gwx_11);return __WXML_GLOBAL__.ops_cached.$gwx_11
 }
 function gz$gwx_12(){
@@ -1831,7 +1832,8 @@ d_[x[10]]={}
 var m10=function(e,s,r,gg){
 var z=gz$gwx_11()
 var e6D=_n('view')
-var b7D=_oz(z,0,e,s,gg)
+_rz(z,e6D,'class',0,e,s,gg)
+var b7D=_oz(z,1,e,s,gg)
 _(e6D,b7D)
 _(r,e6D)
 return r
@@ -2203,7 +2205,7 @@ __wxAppCode__['components/uni-status-bar/uni-status-bar.wxml']=$gwx('./component
 __wxAppCode__['pages/add-input/add-input.wxss']=setCssToHead([".",[1],"uni-textarea{ border: ",[0,1]," solid #eeeeee; }\n.",[1],"gonggao wx-image { width: 75%; margin-bottom: ",[0,15],"; }\n.",[1],"gonggao { width: ",[0,500],"; }\n.",[1],"gonggao wx-button { margin-top: ",[0,15],"; background-color: #FFE934; color: #000000; font-size: 14px; }\n",],undefined,{path:"./pages/add-input/add-input.wxss"});    
 __wxAppCode__['pages/add-input/add-input.wxml']=$gwx('./pages/add-input/add-input.wxml');
 
-__wxAppCode__['pages/home/home.wxss']=undefined;    
+__wxAppCode__['pages/home/home.wxss']=setCssToHead([".",[1],"home{ color: #09BB07; background: #000000; }\n",],undefined,{path:"./pages/home/home.wxss"});    
 __wxAppCode__['pages/home/home.wxml']=$gwx('./pages/home/home.wxml');
 
 __wxAppCode__['pages/index/index.wxss']=undefined;    
