@@ -1,5 +1,5 @@
 <template>
-	 <view class="common-list u-f">
+	 <view class="common-list u-f animated fadeInRight fast">
 	 	<view class="common-list-l">
 	 		<image :src="item.userPic" mode="widthFix" v-lazy></image>
 	 	</view>

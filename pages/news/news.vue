@@ -1,24 +1,7 @@
 <template>
 	<view>
 		<!--自定义导航栏 -->
-		<uni-nav-bar :fixed="true" :statusBar="true" @click-right="addInput" class="nav-bar-hearder">
-			<block solt="left">
-				<view class="tab-bar-left u-f-ajc">
-					<view class="icon iconfont icon-qiandao"></view>
-				</view>
-			</block>
-			<view class="tab-bar-title u-f-ajc">
-				<view>关注<view class="tab-bar-bottom-line" v-show="false"></view>
-				</view>
-				<view class="active">话题<view class="tab-bar-bottom-line" v-show="true"></view>
-				</view>
-			</view>
-			<block solt="right">
-				<view class="tab-bar-right u-f-ajc">
-					<view class="icon iconfont icon-bianji1"></view>
-				</view>
-			</block>
-		</uni-nav-bar>
+		  <news-nav-bar :tabBars="tabBars" :tabIndex="tabIndex" @tabIndex="changeIndex"></news-nav-bar>
 		<!--动态列表 -->
 		<block v-for="(item,index) in list" :key="index">
 			<common-list :item="item" :index="index"></common-list>
@@ -27,16 +10,24 @@
 </template>
 
 <script>
-	import uniNavBar from '@/components/uni-nav-bar/uni-nav-bar.vue';
+	
 	import commonList from '../../components/common/common-list.vue'
+	import  newsNavBar from '../../components/news/news-nav-bar.vue'
 	export default {
 		components: {
-			uniNavBar,
+			newsNavBar,
 			commonList
 		},
+		
 		data() {
 			return {
-				content: '我是内容，我是内容，我是内容，我是内容，我是内容，我是内容，我是内容，我是内容',
+				tabIndex:0,
+				tabBars:[
+					{name:'关注',id:'guanzhu'},
+					{name:'话题',id:'topic'}
+				],
+				
+				
 				list: [
 					//文字
 					{
@@ -112,63 +103,16 @@
 			}
 		},
 		methods: {
-
-		},
-		onLoad() {
-			if (this.content.length > 25) {
-				this.content = this.content.substring(0, 25).concat('......')
+			changeIndex(index){
+				this.tabIndex=index;
 			}
-		}
+            
+		},
+		
 	}
 </script>
 
-<style>
-	.nav-bar-hearder {
-		position: relative;
-	}
-
-	.tab-bar-left {
-		color: #FFC583;
-		left: 20upx
-	}
-
-	.tab-bar-right {
-		color: #333333;
-		right: 20upx
-	}
-
-	.tab-bar-left,
-	.tab-bar-right {
-
-		position: absolute;
-	}
-
-	.icon-qiandao,
-	.icon-bianji1 {
-		font-size: 45upx;
-	}
-
-	.tab-bar-title>view {
-		display: flex;
-		flex-direction: column;
-		height: 100%;
-		margin: 0 15upx;
-		font-size: 35upx;
-		font-weight: bold;
-		color: #969696;
-	}
-
-	.tab-bar-bottom-line {
-		width: 70upx;
-		height: 10upx;
-		margin-top: -10upx;
-		border-radius: 20upx;
-		background: #FEDE33;
-	}
-
-	.tab-bar-title .active {
-		color: #000000;
-	}
-
+<style >
+	
 	
 </style>
