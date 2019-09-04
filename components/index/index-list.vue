@@ -4,7 +4,7 @@
 			<view class="u-f-ac">
 				<image :src="item.userpic" mode="widthFix" lazy-load />{{item.username}}
 			</view>
-			<view class="u-f-ac" v-show="!item.isFollow" @tap="guanzhu">
+			<view class="u-f-ac" v-show="!isFollow" @tap="guanzhu">
 				<view class="icon iconfont icon-zengjia">关注</view>
 			</view>
 		</view>
@@ -27,14 +27,14 @@
 		<view class="index-list4 u-f-jsb u-f-ac">
 			<view class="u-f-ac">
 				<!-- 顶-->
-				<view class="u-f-ac" :class="{'active':item.infoNum.index===1}" @tap="caozuo('ding')">
+				<view class="u-f-ac" :class="{'active':infoNum.index===1}" @tap="caozuo('ding')">
 					<view class="icon iconfont icon-icon_xiaolian-mian"></view>
-					{{item.infoNum.agreeNum}}
+					{{infoNum.agreeNum}}
 				</view>
 				<!-- 踩-->
-				<view class="u-f-ac" :class="{'active':item.infoNum.index===2}" @tap="caozuo('cai')">
+				<view class="u-f-ac" :class="{'active':infoNum.index===2}" @tap="caozuo('cai')">
 					<view class="icon iconfont icon-kulian"></view>
-					{{item.infoNum.disAgreeNum}}
+					{{infoNum.disAgreeNum}}
 				</view>
 			</view>
 			<view class="u-f-ac">
@@ -46,8 +46,6 @@
 					<view class="icon iconfont icon-zhuanfa"></view>
 					{{item.shares}}
 				</view>
-
-
 			</view>
 		</view>
 	</view>
@@ -60,9 +58,15 @@
 			item: Object,
 			index: Number
 		},
+		data(){
+			 return{
+				isFollow:this.item.isFollow,
+				infoNum:this.item.infoNum
+			 }
+		},
 		methods: {
 			guanzhu(){
-				this.item.isFollow=true;
+				this.isFollow=true;
 				uni.showToast({
 					title:'关注成功'
 				})
@@ -70,25 +74,25 @@
 			caozuo(type) {
 				switch (type) {
 					case "ding":
-						if (this.item.infoNum.index == 1) {
+						if (this.infoNum.index == 1) {
 							return;
 						}
-						this.item.infoNum.agreeNum++;
-						if (this.item.infoNum.index == 2) {
-							this.item.infoNum.disAgreeNum--;
+						this.infoNum.agreeNum++;
+						if (this.infoNum.index == 2) {
+							this.infoNum.disAgreeNum--;
 						}
-						this.item.infoNum.index = 1;
+						this.infoNum.index = 1;
 
 						break;
 					case "cai":
-						if (this.item.infoNum.index == 2) {
+						if (this.infoNum.index == 2) {
 							return;
 						}
-						this.item.infoNum.disAgreeNum++;
-						if (this.item.infoNum.index == 1) {
-							this.item.infoNum.agreeNum--;
+						this.infoNum.disAgreeNum++;
+						if (this.infoNum.index == 1) {
+							this.infoNum.agreeNum--;
 						}
-						this.item.infoNum.index = 2;
+						this.infoNum.index = 2;
 						break;
 				}
 			}
@@ -177,6 +181,6 @@
 
 	.index-list4 .active,
 	.index-list4 .active>view {
-		color: #C5F61C;
+		color: #FEDE33;
 	}
 </style>

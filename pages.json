@@ -44,7 +44,13 @@
 		},
 		{
 			"path": "pages/news/news",
-			"style": {}
+			"style": {
+				"app-plus":{
+					"scrollIndicator":"none",
+					"bounce":"none",
+					"titleNView":false
+				}
+			}
 		}, {
 			"path": "pages/paper/paper",
 			"style": {}
