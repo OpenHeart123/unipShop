@@ -45,10 +45,12 @@
 		{
 			"path": "pages/news/news",
 			"style": {
+				
 				"app-plus":{
 					"scrollIndicator":"none",
 					"bounce":"none",
 					"titleNView":false
+					
 				}
 			}
 		}, {
@@ -92,7 +94,7 @@
 			}
         }
         ,{
-            "path" : "pages/add-input/add-input",
+            "path" : "pages/publish/publish",
             "style" : {
 				"app-plus":{
 					"scrollIndicator":"none",
