@@ -9,7 +9,8 @@
 	export default {
 		props:{
 			loadText:String
-		}
+		},
+		
 	}
 </script>
 

@@ -1,5 +1,5 @@
 <template>
-	<view>
+	<view class="animated fadeInRight fast">
 		<!--自定义导航栏 -->
 		<news-nav-bar :tabBars="tabBars" 
 					:tabIndex="tabIndex" @tabIndex="changeIndex" 
@@ -264,6 +264,7 @@
 			changeIndex(index) {
 				this.tabIndex = index;
 			},
+			//去发布页面
 			publish() {
 				uni.navigateTo({
 					url: '../publish/publish'
@@ -272,6 +273,7 @@
 			tapChange(e) {
 				this.tabIndex = e.detail.current;
 			},
+			 //加载数据
 			loadMore(index) {
 				if (this.guanzhu.loadText != "上拉加载更多") {
 					return;

@@ -1,8 +1,8 @@
 <template>
-	<view class="topic-nav">
+	<view class="topic-nav ">
 		<view class="topic-header u-f-ac u-f-jsb">
 			<view class="">热门分类</view>
-			<view class="u-f-ajc">更多 <view class="icon iconfont icon-jinru"></view>
+			<view class="u-f-ajc" @tap="gotoTopiCategory">更多 <view class="icon iconfont icon-jinru"></view>
 			</view>
 		</view>
 		<view class="topic-content u-f">
@@ -17,6 +17,13 @@
 	  export default {
 	  	 props:{
 			 nav:Array
+		 },
+		 methods:{
+			 gotoTopiCategory(){
+				 uni.navigateTo({
+				 	  url:'../../pages/topic-category/topic-category'
+				 })
+			 }
 		 }
 	  }
 </script>

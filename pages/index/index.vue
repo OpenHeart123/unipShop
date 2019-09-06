@@ -1,5 +1,5 @@
 <template>
-	<view>
+	<view class="animated fadeInLeft fast">
 		<!--tabBar组件-->
 		<swiper-tab-bar :tabBars="tabBars" :tabIndex="tabIndex" @tabTap="tabTap"></swiper-tab-bar>
 		<!--滑动组件-->

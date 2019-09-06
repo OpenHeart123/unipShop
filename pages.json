@@ -4,16 +4,16 @@
 			"path": "pages/index/index",
 			"style": {
 				"app-plus": {
-					"scrollIndicator":"none",
-					"bounce":"none",
+					"scrollIndicator": "none",
+					"bounce": "none",
 					"titleNView": {
 						"searchInput": {
-							"align":"center",
-							"backgroundColor":"#F7F7F7",
-							"borderRadius":"4px",
-							"placeholder":"请输入糗事",
-							"placeholderColor":"#CACACA",
-							"disabled":"true"
+							"align": "center",
+							"backgroundColor": "#F7F7F7",
+							"borderRadius": "4px",
+							"placeholder": "请输入糗事",
+							"placeholderColor": "#CACACA",
+							"disabled": "true"
 						},
 						"buttons": [
 							//左边
@@ -45,12 +45,12 @@
 		{
 			"path": "pages/news/news",
 			"style": {
-				
-				"app-plus":{
-					"scrollIndicator":"none",
-					"bounce":"none",
-					"titleNView":false
-					
+
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none",
+					"titleNView": false
+
 				}
 			}
 		}, {
@@ -60,22 +60,22 @@
 			"path": "pages/home/home",
 			"style": {}
 		}
-	   
-        ,{
-            "path" : "pages/search/search",
-            "style" : {
+
+		, {
+			"path": "pages/search/search",
+			"style": {
 				"app-plus": {
-					"scrollIndicator":"none",
-					"bounce":"none",
+					"scrollIndicator": "none",
+					"bounce": "none",
 					"titleNView": {
-						"autoBackButton":false,
+						"autoBackButton": false,
 						"searchInput": {
-							"align":"left",
-							"backgroundColor":"#F7F7F7",
-							"borderRadius":"4px",
-							"placeholder":"请输入糗事",
-							"placeholderColor":"#CACACA",
-							"disabled":"false"
+							"align": "left",
+							"backgroundColor": "#F7F7F7",
+							"borderRadius": "4px",
+							"placeholder": "请输入糗事",
+							"placeholderColor": "#CACACA",
+							"disabled": "false"
 						},
 						"buttons": [
 							//右边
@@ -83,27 +83,47 @@
 								"color": "#000000",
 								"colorPressed": "#BBBBBB",
 								"float": "right",
-								"fontSize": "12px",							
+								"fontSize": "12px",
 								"text": "取消"
 							}
-				
+
 						]
 					}
 				}
-				
+
 			}
-        }
-        ,{
-            "path" : "pages/publish/publish",
-            "style" : {
-				"app-plus":{
-					"scrollIndicator":"none",
-					"bounce":"none",
-					"titleNView":false
+		}, {
+			"path": "pages/publish/publish",
+			"style": {
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none",
+					"titleNView": false
 				}
 			}
-        }
-    ],
+		}, {
+			"path": "pages/topic-category/topic-category",
+			"style": {
+
+			}
+		}, {
+			"path": "pages/topic-detail/topic-detail",
+			"style": {
+				"enablePullDownRefresh":"true",
+				"app-plus": {
+					"bounce": "none",
+					"scrollIndicator": "none",
+					"navigationBarTitleText": "话题分类",
+					"titleNView": {
+					   "type": "transparent",
+						"buttons": [{
+							"type": "menu"
+						}]
+					}
+				}
+			}
+		}
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "仿糗事百科app",

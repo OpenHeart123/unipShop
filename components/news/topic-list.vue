@@ -2,7 +2,7 @@
 	<view class="topic-news">
 		<view class="topic-title">最近更新</view>
 		<block v-for="(item,index) in topiclist" :key="index">
-			<view class="topic-list u-f-ac">
+			<view class="topic-list u-f-ac" @tap="gotoDetail">
 				<image  :src="item.topicpic" 
 						mode="widthFix" lazy-load></image>
 				<view class="topic-list-desc">
@@ -19,6 +19,14 @@
 	export default {
 		props:{
 			topiclist:Array
+		},
+		methods:{
+			gotoDetail(){
+				console.log('gotoDetail')
+				uni.navigateTo({
+					url: '../../pages/topic-detail/topic-detail',			
+				});
+			}
 		}
 	}
 </script>
