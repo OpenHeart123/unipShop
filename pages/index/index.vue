@@ -285,7 +285,7 @@
 			// console.log(JSON.stringify(e))
 			if(e.index==1){
 				uni.navigateTo({
-					url: '../add-input/add-input',
+					url: '../publish/publish',
 				});
 			}
 		},

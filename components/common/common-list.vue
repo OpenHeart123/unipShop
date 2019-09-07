@@ -8,11 +8,8 @@
 	 			<view class="u-f-ajc">
 	 				<view class="">{{item.name}}</view>
 	 				<view class="u-f-ajc">
-	 					<view class="tag-sex icon iconfont" :class="[item.sexIndex==0?'icon-nan':'icon-nv']">
-	 						{{item.age}}
-	 					</view>
+	 					<tag-sex-age :item="item"></tag-sex-age>
 	 				</view>
-	 
 	 			</view>
 	 			<view class="icon iconfont icon-zengjia" v-show="!isFollow" @tap="guanzhu">关注</view>
 	 		</view>
@@ -45,7 +42,11 @@
 </template>
        
 <script>
+	  import tagSexAge from './tag-sex-age';
 	  export default {
+		  components:{
+			  tagSexAge
+		  },
 	  	    props:{
 				item:Object,
 				index:Number
@@ -111,14 +112,13 @@
 		border-radius: 20upx;
 	}
 	
-	.tag-sex {
+/* 	.tag-sex {
 		padding: 2upx 5upx;
 		font-size: 30upx;
 		line-height: 32upx;
 		color: #FFFFFF;
-	
 	}
-	
+	 */
 	.common-list-r>view:nth-child(2)>view {
 		padding: 15upx 0;
 		font-size: 32upx;

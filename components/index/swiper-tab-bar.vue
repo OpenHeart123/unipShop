@@ -5,7 +5,8 @@
 			<block v-for="(tab,index) in tabBars" :key="tab.id">
 				<view class="swiper-tab-list" 
 				:style="uniItemStyle"
-				:class="{'active':tabIndex==index}" @tap="tabTap(index)">{{tab.name}}
+				:class="{'active':tabIndex==index}" 
+				@tap="tabTap(index)">{{tab.name}}  {{tab.num>0?tab.num:''}}
 					<view class="swiper-tab-line"></view>
 				</view>
 			</block>
@@ -43,7 +44,6 @@
   
   .uni-tab-bar .active {
   	color: #343434;
-  
   
   }
   

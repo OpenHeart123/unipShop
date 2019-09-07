@@ -3,8 +3,9 @@
 		<!-- 话题介绍-->
 		<topic-info :item="topicinfo"></topic-info>
 		<!--tabBar组件-->
-		<swiper-tab-bar :tabBars="tabBars" :tabIndex="tabIndex" @tabTap="tabTap" uniSwiperStyle="border-bottom: 0;"
-		 uniItemStyle="width:50%;"></swiper-tab-bar>
+		<swiper-tab-bar :tabBars="tabBars" :tabIndex="tabIndex" 
+			@tabTap="tabTap" uniSwiperStyle="border-bottom: 0;"
+			uniItemStyle="width:50%;"></swiper-tab-bar>
 		<!-- 话题详情列表-->
 		<view class="topic-detail-list">
 			<block v-for="(item,index) in detailist" :key="index">
@@ -415,8 +416,6 @@
 			}
 
 		},
-
-
 
 		onLoad() {
 			uni.getSystemInfo({

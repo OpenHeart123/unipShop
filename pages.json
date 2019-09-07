@@ -45,7 +45,6 @@
 		{
 			"path": "pages/news/news",
 			"style": {
-
 				"app-plus": {
 					"scrollIndicator": "none",
 					"bounce": "none",
@@ -53,15 +52,49 @@
 
 				}
 			}
-		}, {
+		}, 
+		{
 			"path": "pages/paper/paper",
-			"style": {}
-		}, {
+			"style": {
+				"navigationBarTitleText": "小纸条",
+				"enablePullDownRefresh":true,
+				"app-plus": {
+					"bounce": "none",
+					"titleNView": {
+						"buttons": [
+
+							//左边
+							{
+								"color": "#000000",
+								"colorPressed": "#BBBBBB",
+								"float": "left",
+								"fontSize": "20px",
+								"fontSrc": "/static/font/icon.ttf",
+								"text": "\ue845"
+
+							},
+							//右边
+							{
+								"color": "#000000",
+								"colorPressed": "#BBBBBB",
+								"float": "right",
+								"fontSize": "20px",
+								"fontSrc": "/static/font/icon.ttf",
+								"text": "\ue684"
+
+							}
+
+
+						]
+					}
+				}
+			}
+		}, 
+		{
 			"path": "pages/home/home",
 			"style": {}
-		}
-
-		, {
+		}, 
+		{
 			"path": "pages/search/search",
 			"style": {
 				"app-plus": {
@@ -92,7 +125,8 @@
 				}
 
 			}
-		}, {
+		},
+		{
 			"path": "pages/publish/publish",
 			"style": {
 				"app-plus": {
@@ -101,29 +135,62 @@
 					"titleNView": false
 				}
 			}
-		}, {
+		},
+		{
 			"path": "pages/topic-category/topic-category",
-			"style": {
-
-			}
+			"style": {}
 		}, {
 			"path": "pages/topic-detail/topic-detail",
 			"style": {
-				"enablePullDownRefresh":"true",
+				"enablePullDownRefresh": true,
 				"app-plus": {
 					"bounce": "none",
 					"scrollIndicator": "none",
 					"navigationBarTitleText": "话题分类",
 					"titleNView": {
-					   "type": "transparent",
+						"type": "transparent",
 						"buttons": [{
 							"type": "menu"
 						}]
 					}
 				}
 			}
-		}
-	],
+		},
+		{
+            "path" : "pages/user-list/user-list",
+			"style": {
+				"app-plus": {
+					"animationType":"slide-in-left",
+					"scrollIndicator": "none",
+					"bounce": "none",
+					"titleNView": {
+						"autoBackButton": false,
+						"searchInput": {
+							"align": "left",
+							"backgroundColor": "#F7F7F7",
+							"borderRadius": "4px",
+							"placeholder": "请输入糗事",
+							"placeholderColor": "#CACACA",
+							"disabled": "false"
+						},
+						"buttons": [
+							//右边
+							{
+								"color": "#000000",
+								"colorPressed": "#BBBBBB",
+								"float": "right",
+								"fontSize": "12px",
+								"text": "取消"
+							}
+			
+						]
+					}
+				}
+			
+			}
+            
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "仿糗事百科app",

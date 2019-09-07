@@ -2,7 +2,7 @@
 	<view class="index-list animated fadeInLeft fast">
 		<view class="index-list1 u-f-ac u-f-jsb">
 			<view class="u-f-ac">
-				<image :src="item.userpic" mode="widthFix" lazy-load />{{item.username}}
+				<image :src="item.userpic" lazy-load />{{item.username}}
 			</view>
 			<view class="u-f-ac" v-show="!isFollow" @tap="guanzhu">
 				<view class="icon iconfont icon-zengjia">关注</view>
@@ -103,7 +103,7 @@
 
 <style scoped>
 	.index-list {
-		padding: 15upx;
+		padding: 0 15upx;
 		border-bottom: 1upx solid #EEEEEE;
 	}
 
@@ -128,7 +128,7 @@
 	}
 
 	.index-list2 {
-		margin: 20upx 0;
+		margin: 10upx 0;
 		font-size: 32upx;
 		color: #000000;
 		padding-left: 20upx;

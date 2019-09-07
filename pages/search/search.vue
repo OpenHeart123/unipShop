@@ -21,7 +21,7 @@
 		},
 		//监听原生标题栏按钮点击事件
 		onNavigationBarButtonTap(e){
-			console.log(JSON.stringify(e))
+			
 			if(e.index==0){
 				uni.navigateBack({
 				    delta: 1
