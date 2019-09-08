@@ -8,7 +8,7 @@
 		 ></paper-left-popup>
 		<!--显示列表 -->
 			<block v-for="(item,index) in list" :key="index">
-				<paper-list :item="item" :index="index"/>				
+				<paper-list :item="item" :index="index" @tap="gotoChat"/>				
 			</block>
 			<load-more :loadText="loadText"></load-more>
 			
@@ -112,6 +112,13 @@
 			 }
 		 },
 		methods: {
+			
+			//跳转到聊天页面
+			gotoChat(){
+				uni.navigateTo({
+					url:"../user-chat/user-chat"
+				})
+			},
 			
 			getData(){
 				setTimeout(()=>{

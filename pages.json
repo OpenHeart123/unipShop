@@ -159,28 +159,21 @@
 		{
             "path" : "pages/user-list/user-list",
 			"style": {
-				"app-plus": {
-					"animationType":"slide-in-left",
+				"app-plus": {					
 					"scrollIndicator": "none",
+					"navigationBarTitleText":"话题聊天",
 					"bounce": "none",
 					"titleNView": {
-						"autoBackButton": false,
-						"searchInput": {
-							"align": "left",
-							"backgroundColor": "#F7F7F7",
-							"borderRadius": "4px",
-							"placeholder": "请输入糗事",
-							"placeholderColor": "#CACACA",
-							"disabled": "false"
-						},
+						
 						"buttons": [
 							//右边
 							{
 								"color": "#000000",
 								"colorPressed": "#BBBBBB",
 								"float": "right",
-								"fontSize": "12px",
-								"text": "取消"
+								"fontSize": "20px",
+								"fontSrc": "/static/font/icon.ttf",
+								"text": "\ue684"
 							}
 			
 						]
@@ -189,6 +182,31 @@
 			
 			}
             
+        }
+        ,{
+            "path" : "pages/user-chat/user-chat",
+            "style" : {
+				"app-plus": {
+					"scrollIndicator": "none",
+					"navigationBarTitleText":"话题聊天",
+					"bounce": "none",
+					"titleNView": {
+						
+						"buttons": [
+							//右边
+							{
+								"color": "#000000",
+								"colorPressed": "#BBBBBB",
+								"float": "right",
+								"fontSize": "20px",
+								"fontSrc": "/static/font/icon.ttf",
+								"text": "\ue684"
+							}
+							
+						]
+					}
+				}
+			}
         }
     ],
 	"globalStyle": {
