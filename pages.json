@@ -97,6 +97,7 @@
 		{
 			"path": "pages/search/search",
 			"style": {
+				"enablePullDownRefresh":true,
 				"app-plus": {
 					"scrollIndicator": "none",
 					"bounce": "none",
@@ -104,6 +105,7 @@
 						"autoBackButton": false,
 						"searchInput": {
 							"align": "left",
+							"autoFocus":true,
 							"backgroundColor": "#F7F7F7",
 							"borderRadius": "4px",
 							"placeholder": "请输入糗事",
@@ -200,9 +202,31 @@
 								"float": "right",
 								"fontSize": "20px",
 								"fontSrc": "/static/font/icon.ttf",
-								"text": "\ue684"
+								"text": "\ue628"
 							}
 							
+						]
+					}
+				}
+			}
+        }
+        ,{
+            "path" : "pages/detail/detail",
+            "style" : {
+				"enablePullDownRefresh":false,
+				"app-plus":{
+					"scrollIndicator":"none",
+					"bounce":"none",
+					"navigationBarTitleText":"详情页面",
+					"titleNView":{
+						"buttons":[
+							{
+								"type":"menu",
+								"color": "#000000",
+								"colorPressed": "#BBBBBB",
+								"float": "right",
+								"fontSize": "20px"
+							}
 						]
 					}
 				}

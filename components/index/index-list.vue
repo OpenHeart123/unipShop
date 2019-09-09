@@ -11,7 +11,7 @@
 		<view class="index-list2">
 			{{item.title}}
 		</view>
-		<view class="index-list3 u-f-ajc ">
+		<view class="index-list3 u-f-ajc " @tap="openDetail">
 			<!-- 图片 -->
 			<image :src="item.titlePic" mode="widthFix" lazy-load/>
 			<template v-if="item.type=='vedio'">
@@ -65,6 +65,13 @@
 			 }
 		},
 		methods: {
+			//进入详情页面
+			openDetail(){
+				uni.navigateTo({
+					url:'../../pages/detail/detail?detailData='+JSON.stringify(this.item)
+				})
+			},
+			//点击关注
 			guanzhu(){
 				this.isFollow=true;
 				uni.showToast({
